@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <h2>Circle Calculator</h2>
+
+    <form method="POST">
+        <label>Enter radius:</label>
+        <input type="number" step="any" name="radius" required>
+        <button type="submit">Calculate</button>
+    </form>
+
+    {% if result is not none %}
+        <h3>Perimeter: {{ result }}</h3>
+        <h3>Area: {{ area }}</h3>
+    {% endif %}
+
+{% endblock %}
